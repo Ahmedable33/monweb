@@ -1,0 +1,20 @@
+
+
+<!-- search_results.html -->
+
+
+{% if query %}
+    <h1>Résultats de la recherche pour "{{ item_name }}"</h1>
+    <ul>
+        {% for product in query %}
+            <li>{{ product.name }} - {{ product.description }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucun résultat trouvé.</p>
+{% endif %}
+
+
+{% block search %}
+
+{% endblock %}

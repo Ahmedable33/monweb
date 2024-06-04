@@ -1,0 +1,203 @@
+{% extends 'base1.html' %}
+
+
+{% comment %} {% block content %}
+ {% if not user.is_authenticated %}
+        <button type="submit"><a href="{% url 'connexion' %}">login</a></button>
+ {% else %}
+
+
+    <!-- cart.html -->
+    <h2>Shopping Cart</h2>
+    {% for message in messages %}
+        {{message}}
+    {% endfor %}
+    {% if cart_items %}
+
+      <ul>
+        {% for item in cart_items %}
+          <li>
+            {{ item.product.name }} - Quantity: {{ item.quantity }} - Price : {{ item.product.price }}
+
+                <p>Total Price: ${{ item.total_price  }}</p>
+
+    {#        <a href="{% url 'remove_cart' item.product.id %}">Remove</a>#}
+
+           <form action="{% url 'remove_cart' item.product.id %}" method="POST">
+            {% csrf_token %}
+            <label> Quantity :</label>
+            <input name="quantity" type="number" value="1" min="1">
+            <button type="submit ">Remove from cart</button>
+        </form>
+          </li>
+        {% endfor %}
+    </ul>
+    {{ total}}
+    {% else %}
+      <p>Your cart is empty.</p>
+    {% endif %}
+    <button type="submit"><a href="{% url 'command' %}">Command</a></button>
+{% endif %}
+{% endblock %} {% endcomment %}
+
+
+{% block content %}
+
+{% if not user.is_authenticated %}
+        <button type="submit"><a href="{% url 'connexion' %}">login</a></button>
+ {% else %}
+
+{% for message in messages %}
+        {{message}}
+    {% endfor %}
+
+  
+<div class="page-content">
+  <div class="cart">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+           
+            <table class="table table-cart table-mobile">
+      <thead>
+        <tr>
+          <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Produit</font></font></th>
+          <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prix</font></font></th>
+          <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quantité</font></font></th>
+          <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></th>
+          <th></th>
+        </tr>
+      </thead>
+    {% if cart_items %}
+    {% for item in cart_items %}
+      <tbody>
+        <tr>
+          <td class="product-col">
+            <div class="product">
+              <figure class="product-media">
+                <a href="#">
+                  <img src="{{ item.product.thumbnail.url }}" alt="Image du produit">
+                </a>
+              </figure>
+               
+              <h3 class="product-title">
+                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ item.product.name }}</font></font></a>
+              </h3><!-- End .product-title -->
+            </div><!-- End .product -->
+          </td>
+          <td class="price-col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ item.product.price }}&nbsp;$</font></font></td>
+          <td class="quantity-col">
+
+            <td class="total-col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ item.quantity }}</font></font></td>
+
+                                    {% comment %} <div class="cart-product-quantity">
+                                        <input type="number" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required="" style="display: none;"><div class="input-group  input-spinner"><div class="input-group-prepend"><button style="min-width: 26px" class="btn btn-decrement btn-spinner" type="button"><i class="icon-minus"></i></button></div><input type="text" style="text-align: center" class="form-control " required="" placeholder=""><div class="input-group-append"><button style="min-width: 26px" class="btn btn-increment btn-spinner" type="button"><i class="icon-plus"></i></button></div></div>
+                                    </div><!-- End .cart-product-quantity --> {% endcomment %}
+                                </td>
+          <td class="total-col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">${{ item.total_price  }}&nbsp;$</font></font></td>
+        </tr>
+        <tr>
+        
+          <form action="{% url 'remove_cart' item.product.id %}" method="POST">
+              {% csrf_token %}
+          {% comment %} <td class="price-col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">76,00&nbsp;$</font></font></td> {% endcomment %}
+          <td class="quantity-col">
+                                    <div class="cart-product-quantity">
+                                        <input type="number" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required="" style="quantity"><div class="input-group  input-spinner"><div class="input-group-prepend"><button style="min-width: 26px" class="btn btn-decrement btn-spinner" type="button"></button></div></div>
+                                    </div><!-- End .cart-product-quantity -->                                 
+                                </td>
+          <td class="remove-col"><button class="btn-remove" type="submit" ><i class="icon-close"></i>Remove </button></td>
+        </form>
+     
+        {% endfor %}
+        </tr>
+      </tbody>
+    </table><!-- End .table table-wishlist -->
+    
+            <div class="cart-bottom">
+            <div class="cart-discount">
+              <form action="#">
+                <div class="input-group">
+                <input type="text" class="form-control" required="" placeholder="code promo">
+                <div class="input-group-append">
+              <button class="btn btn-outline-primary-2" type="submit"><i class="icon-long-arrow-right"></i></button>
+            </div><!-- .End .input-group-append -->
+              </div><!-- End .input-group -->
+              </form>
+            </div><!-- End .cart-discount -->
+
+            <a href="#" class="btn btn-outline-dark-2"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MISE À JOUR PANIER</font></font></span><i class="icon-refresh"></i></a>
+          </div><!-- End .cart-bottom -->
+          </div><!-- End .col-lg-9 -->
+          <aside class="col-lg-3">
+            <div class="summary summary-cart">
+              <h3 class="summary-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total du panier</font></font></h3><!-- End .summary-title -->
+
+              <table class="table table-summary">
+                <tbody>
+                  <tr class="summary-subtotal">
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total:</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">160,00&nbsp;$</font></font></td>
+                  </tr><!-- End .summary-subtotal -->
+                  <tr class="summary-shipping">
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Expédition:</font></font></td>
+                    <td>&nbsp;</td>
+                  </tr>
+
+                  <tr class="summary-shipping-row">
+                    <td>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="free-shipping" name="shipping" class="custom-control-input">
+                <label class="custom-control-label" for="free-shipping"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Livraison gratuite</font></font></label>
+              </div><!-- End .custom-control -->
+                    </td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0,00&nbsp;$</font></font></td>
+                  </tr><!-- End .summary-shipping-row -->
+
+                  <tr class="summary-shipping-row">
+                    <td>
+                      <div class="custom-control custom-radio">
+                <input type="radio" id="standart-shipping" name="shipping" class="custom-control-input">
+                <label class="custom-control-label" for="standart-shipping"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Norme&nbsp;:</font></font></label>
+              </div><!-- End .custom-control -->
+                    </td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10,00&nbsp;$</font></font></td>
+                  </tr><!-- End .summary-shipping-row -->
+
+                  <tr class="summary-shipping-row">
+                    <td>
+                      <div class="custom-control custom-radio">
+                <input type="radio" id="express-shipping" name="shipping" class="custom-control-input">
+                <label class="custom-control-label" for="express-shipping"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exprimer:</font></font></label>
+              </div><!-- End .custom-control -->
+                    </td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">20,00&nbsp;$</font></font></td>
+                  </tr><!-- End .summary-shipping-row -->
+
+                  <tr class="summary-shipping-estimate">
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estimation pour votre pays</font></font><br> <a href="dashboard.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Changement d'adresse</font></font></a></td>
+                    <td>&nbsp;</td>
+                  </tr><!-- End .summary-shipping-estimate -->
+
+                  <tr class="summary-total">
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total:</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ total}}&nbsp;$</font></font></td>
+                  </tr><!-- End .summary-total -->
+                  {% else %}
+                  <p>Your cart is empty.</p>
+                {% endif %}
+                </tbody>
+              </table><!-- End .table table-summary -->
+
+              <a href="{% url 'command' %}" class="btn btn-outline-primary-2 btn-order btn-block"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PASSER À LA CAISSE</font></font></a>
+            </div><!-- End .summary -->
+
+          <a href="category.html" class="btn btn-outline-dark-2 btn-block mb-3"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CONTINUER VOS ACHATS</font></font></span><i class="icon-refresh"></i></a>
+          </aside><!-- End .col-lg-3 -->
+        </div><!-- End .row -->
+      </div><!-- End .container -->
+      {% endif %}
+   
+    </div><!-- End .cart -->
+</div>
+  {% endblock %}

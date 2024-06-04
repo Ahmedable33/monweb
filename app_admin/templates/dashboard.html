@@ -1,0 +1,11 @@
+{% extends 'base_admin.html' %}
+
+{% block content %}
+    <p> Dashbord </p>
+{#    {% if perms.app_admin.add_product %}#}
+    	<a href="{% url 'my_articles' %}"> my articles</a>
+{#    {% else %}#}
+        <p> Vous n'avez pas la permission </p>
+{#    {% endif %} #}
+
+{% endblock %}

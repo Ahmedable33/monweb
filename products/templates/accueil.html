@@ -1,0 +1,41 @@
+{% extends 'base1.html' %}
+
+
+{% block title %} MOLLA | My Product {% endblock %}
+{# {% block js %}#}
+{#     {{  total }}#}
+{# {% endblock %}#}
+
+{% block active1 %} active {% endblock %}
+{% block active02 %} active {% endblock %}
+{% block connecte %}
+
+  <ul>
+    {% if not user.is_authenticated %}
+    <li>
+      <a href="{% url 'connexion' %}" class="sf-with-ul">Login</a>
+    </li>
+    <li>
+        <a href="{% url 'signup' %}" class="sf-with-ul">Sign up</a>
+    </li>
+    {% else %}
+    
+    <li>
+        <a href="{% url 'signout' %}" class="sf-with-ul">signout</a>
+    </li>
+  
+   
+  {% endif %}
+</ul>
+{% endblock %} 
+
+
+
+{% block content %}
+    {% include 'product.html' %}
+{% endblock %}
+
+{##}
+
+
+

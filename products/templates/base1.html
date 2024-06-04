@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+  
+    <link rel="stylesheet" type="text/css" href="{% static "css/navbar-top-fixed.css" %}">
+    {% comment %} <link href="{% static "bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet"> {% endcomment %}
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> {% endcomment %}
+    
+    {% comment %} Template links  {% endcomment %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="Molla - Bootstrap eCommerce Template">
+    <meta name="author" content="p-themes">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../static/assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../static/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="../../static/assets/images/icons/site.html">
+    <link rel="mask-icon" href="../../static/assets/images/icons/safari-pinned-tab.svg" color="#666666">
+    <link rel="shortcut icon" href="../../static/assets/images/icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Molla">
+    <meta name="application-name" content="Molla">
+    <meta name="msapplication-TileColor" content="#cc9966">
+    <meta name="msapplication-config" content="../../static/assets/images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="../../static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/assets/css/plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="../../static/assets/css/plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="../../static/assets/css/plugins/jquery.countdown.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="../../static/assets/css/style.css">
+    <link rel="stylesheet" href="../../static/assets/css/skins/skin-demo-8.css">
+    <link rel="stylesheet" href="../../static/../../static/assets/css/demos/demo-8.css">
+
+
+   
+    {% comment %} <link rel="stylesheet" href="assets/css/style.css"> {% endcomment %}
+
+
+      <!-- Plugins CSS File for categorie-boxed -->
+      {% comment %} <link rel="stylesheet" href="../../static/assets/css/bootstrap.min.css"> {% endcomment %}
+      <!-- Main CSS File categorie-boxed -->
+      {% comment %} <link rel="stylesheet" href="../../static/assets/css/style.css"> {% endcomment %}
+      <link rel="stylesheet" href="../../static/assets/css/plugins/owl-carousel/owl.carousel.css">
+      <link rel="stylesheet" href="../../static/assets/css/plugins/magnific-popup/magnific-popup.css">
+      <link rel="stylesheet" href="../../static/assets/css/plugins/nouislider/nouislider.css">
+
+      <link rel="stylesheet" href="../../static/assets/css/plugins/magnific-popup/magnific-popup.css">
+    <!-- Main CSS File -->
+    {% comment %} <link rel="stylesheet" href="assets/css/style.css"> {% endcomment %}
+    <link rel="stylesheet" href="../../static/assets/css/plugins/nouislider/nouislider.css">
+
+
+    <title> {% block title %} {% endblock %}</title>
+</head>
+<body>
+
+     {% include "header.html" %}
+  
+    {% block carousel %}
+
+    {% endblock %}
+   {% block content %}
+
+   {% endblock %}
+
+   {% block boutique %}
+
+   {% endblock %}
+   {% block category %}
+   {% endblock  %}
+  
+    
+
+
+<footer class="footer footer-2">
+      <div class="footer-middle">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 col-lg-6">
+                      <div class="widget widget-about">
+                          <img src="../../static/assets/images/demos/demo-8/logo-footer.png" class="footer-logo" alt="Footer Logo" width="82" height="25">
+                          <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. </p>
+                          
+                          <div class="widget-about-info">
+                              <div class="row">
+                                  <div class="col-sm-6 col-md-4">
+                                      <span class="widget-about-title">Got Question? Call us 24/7</span>
+                                      <a href="tel:123456789">+0123 456 789</a>
+                                  </div><!-- End .col-sm-6 -->
+                                  <div class="col-sm-6 col-md-8">
+                                      <span class="widget-about-title">Payment Method</span>
+                                      <figure class="footer-payments">
+                                          <img src="../../static/assets/images/payments.png" alt="Payment methods" width="272" height="20">
+                                      </figure><!-- End .footer-payments -->
+                                  </div><!-- End .col-sm-6 -->
+                              </div><!-- End .row -->
+                          </div><!-- End .widget-about-info -->
+                      </div><!-- End .widget about-widget -->
+                  </div><!-- End .col-sm-12 col-lg-3 -->
+
+                  <div class="col-sm-4 col-lg-2">
+                      <div class="widget">
+                          <h4 class="widget-title">Information</h4><!-- End .widget-title -->
+
+                          <ul class="widget-list">
+                              <li><a href="about.html">About Molla</a></li>
+                              <li><a href="#">How to shop on Molla</a></li>
+                              <li><a href="faq.html">FAQ</a></li>
+                              <li><a href="contact.html">Contact us</a></li>
+                              <li><a href="#">Log in</a></li>
+                          </ul><!-- End .widget-list -->
+                      </div><!-- End .widget -->
+                  </div><!-- End .col-sm-4 col-lg-3 -->
+
+                  <div class="col-sm-4 col-lg-2">
+                      <div class="widget">
+                          <h4 class="widget-title">Customer Service</h4><!-- End .widget-title -->
+
+                          <ul class="widget-list">
+                              <li><a href="#">Payment Methods</a></li>
+                              <li><a href="#">Money-back guarantee!</a></li>
+                              <li><a href="#">Returns</a></li>
+                              <li><a href="#">Shipping</a></li>
+                              <li><a href="#">Terms and conditions</a></li>
+                              <li><a href="#">Privacy Policy</a></li>
+                          </ul><!-- End .widget-list -->
+                      </div><!-- End .widget -->
+                  </div><!-- End .col-sm-4 col-lg-3 -->
+
+                  <div class="col-sm-4 col-lg-2">
+                      <div class="widget">
+                          <h4 class="widget-title">My Account</h4><!-- End .widget-title -->
+
+                          <ul class="widget-list">
+                              <li><a href="#">Sign In</a></li>
+                              <li><a href="cart.html">View Cart</a></li>
+                              <li><a href="#">My Wishlist</a></li>
+                              <li><a href="#">Track My Order</a></li>
+                              <li><a href="#">Help</a></li>
+                          </ul><!-- End .widget-list -->
+                      </div><!-- End .widget -->
+                  </div><!-- End .col-sm-64 col-lg-3 -->
+              </div><!-- End .row -->
+          </div><!-- End .container -->
+      </div><!-- End .footer-middle -->
+
+      <div class="footer-bottom">
+          <div class="container">
+              <p class="footer-copyright">Copyright © 2019 Molla Store. All Rights Reserved.</p><!-- End .footer-copyright -->
+              <ul class="footer-menu">
+                  <li><a href="#">Terms Of Use</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+              </ul><!-- End .footer-menu -->
+
+              <div class="social-icons social-icons-color">
+                  <span class="social-label">Social Media</span>
+                  <a href="#" class="social-icon social-facebook" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
+                  <a href="#" class="social-icon social-twitter" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+                  <a href="#" class="social-icon social-instagram" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
+                  <a href="#" class="social-icon social-youtube" title="Youtube" target="_blank"><i class="icon-youtube"></i></a>
+                  <a href="#" class="social-icon social-pinterest" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></a>
+              </div><!-- End .soial-icons -->
+          </div><!-- End .container -->
+      </div><!-- End .footer-bottom -->
+</footer><!-- End .footer -->
+</div><!-- End .page-wrapper -->
+<button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
+
+<div class="mobile-menu-container">
+  <div class="mobile-menu-wrapper">
+      <span class="mobile-menu-close"><i class="icon-close"></i></span>
+
+      <form action="#" method="get" class="mobile-search">
+          <label for="mobile-search" class="sr-only">Search</label>
+          <input type="search" class="form-control" name="item_name" id="mobile-search" placeholder="Search in..." required>
+          <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+      </form>
+      
+      <nav class="mobile-nav">
+          <ul class="mobile-menu">
+              <li class="{% block active01 %}{% endblock %}">
+                  <a href="{% url  'boutique' %}">Home</a>
+
+                
+              </li>
+              <li class="{% block active02 %}{% endblock %}">
+                  <a href="{% url 'product' %}">Products</a>
+             
+              </li>
+              <li class="{% block active03 %}{% endblock %}">
+                  <a href="{% url 'category' %}" class="sf-with-ul">Category</a>
+                  <ul>
+                    <li><a href="product.html">Shirt</a></li>
+                    <li><a href="product-centered.html">Lacoste</a></li>
+                    <li><a href="product-extended.html"><span>Kadigan<span class="tip tip-new">New</span></span></a></li>
+                    <li><a href="product-gallery.html">Skirt</a></li>
+                    <li><a href="product-sticky.html">Swetter</a></li>
+                    <li><a href="product-sidebar.html">Boxer</a></li>
+                    <li><a href="product-fullwidth.html">Shoose</a></li>
+                    <li><a href="product-masonry.html">Hand Bag</a></li>
+                </ul>
+              </li> 
+              <li class="{% block active04 %}{% endblock %}">
+                  <a href="#">Account</a>
+                  <ul>
+                    {% if not user.is_authenticated %}
+                    <li>
+                      <a href="{% url 'connexion' %}" class="">Login</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'signup' %}" class="">Sign up</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'dashboard' %}" class="">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'signout' %}" class="">signout</a>
+                    </li>
+                  {% endif %}
+                  </ul> 
+              </li>
+              <li class="{% block active05 %}{% endblock %}">
+                  <a href="blog.html">About Us</a>
+
+              </li>
+             
+          </ul>
+      </nav><!-- End .mobile-nav -->
+
+      <div class="social-icons">
+          <a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
+          <a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
+          <a href="#" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
+          <a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
+      </div><!-- End .social-icons -->
+  </div><!-- End .mobile-menu-wrapper -->
+</div><!-- End .mobile-menu-container -->
+
+<!-- Sign in / Register Modal -->
+<div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true"><i class="icon-close"></i></span>
+              </button>
+
+              <div class="form-box">
+                  <div class="form-tab">
+                      <ul class="nav nav-pills nav-fill nav-border-anim" role="tablist">
+                          <li class="nav-item">
+                              <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">Sign In</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
+                          </li>
+                      </ul>
+                      <div class="tab-content" id="tab-content-5">
+                          <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+                              <form action="#">
+                                  <div class="form-group">
+                                      <label for="singin-email">Username or email address *</label>
+                                      <input type="text" class="form-control" id="singin-email" name="singin-email" required>
+                                  </div><!-- End .form-group -->
+
+                                  <div class="form-group">
+                                      <label for="singin-password">Password *</label>
+                                      <input type="password" class="form-control" id="singin-password" name="singin-password" required>
+                                  </div><!-- End .form-group -->
+
+                                  <div class="form-footer">
+                                      <button type="submit" class="btn btn-outline-primary-2">
+                                          <span>LOG IN</span>
+                                          <i class="icon-long-arrow-right"></i>
+                                      </button>
+
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="signin-remember">
+                                          <label class="custom-control-label" for="signin-remember">Remember Me</label>
+                                      </div><!-- End .custom-checkbox -->
+
+                                      <a href="#" class="forgot-link">Forgot Your Password?</a>
+                                  </div><!-- End .form-footer -->
+                              </form>
+                              <div class="form-choice">
+                                  <p class="text-center">or sign in with</p>
+                                  <div class="row">
+                                      <div class="col-sm-6">
+                                          <a href="#" class="btn btn-login btn-g">
+                                              <i class="icon-google-plus-g"></i>
+                                              Login With Google
+                                          </a>
+                                      </div><!-- End .col-6 -->
+                                      <div class="col-sm-6">
+                                          <a href="#" class="btn btn-login btn-f">
+                                              <i class="icon-facebook-f"></i>
+                                              Login With Facebook
+                                          </a>
+                                      </div><!-- End .col-6 -->
+                                  </div><!-- End .row -->
+                              </div><!-- End .form-choice -->
+                          </div><!-- .End .tab-pane -->
+                          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                              <form action="#">
+                                  <div class="form-group">
+                                      <label for="register-email">Your email address *</label>
+                                      <input type="email" class="form-control" id="register-email" name="register-email" required>
+                                  </div><!-- End .form-group -->
+
+                                  <div class="form-group">
+                                      <label for="register-password">Password *</label>
+                                      <input type="password" class="form-control" id="register-password" name="register-password" required>
+                                  </div><!-- End .form-group -->
+
+                                  <div class="form-footer">
+                                      <button type="submit" class="btn btn-outline-primary-2">
+                                          <span>SIGN UP</span>
+                                          <i class="icon-long-arrow-right"></i>
+                                      </button>
+
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="register-policy" required>
+                                          <label class="custom-control-label" for="register-policy">I agree to the <a href="#">privacy policy</a> *</label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .form-footer -->
+                              </form>
+                              <div class="form-choice">
+                                  <p class="text-center">or sign in with</p>
+                                  <div class="row">
+                                      <div class="col-sm-6">
+                                          <a href="#" class="btn btn-login btn-g">
+                                              <i class="icon-google-plus-g"></i>
+                                              Login With Google
+                                          </a>
+                                      </div><!-- End .col-6 -->
+                                      <div class="col-sm-6">
+                                          <a href="#" class="btn btn-login  btn-f">
+                                              <i class="icon-facebook-f"></i>
+                                              Login With Facebook
+                                          </a>
+                                      </div><!-- End .col-6 -->
+                                  </div><!-- End .row -->
+                              </div><!-- End .form-choice -->
+                          </div><!-- .End .tab-pane -->
+                      </div><!-- End .tab-content -->
+                  </div><!-- End .form-tab -->
+              </div><!-- End .form-box -->
+          </div><!-- End .modal-body -->
+      </div><!-- End .modal-content -->
+  </div><!-- End .modal-dialog -->
+</div><!-- End .modal -->
+
+<div class="container newsletter-popup-container mfp-hide" id="newsletter-popup-form">
+  <div class="row justify-content-center">
+      <div class="col-10">
+          <div class="row no-gutters bg-white newsletter-popup-content">
+              <div class="col-xl-3-5col col-lg-7 banner-content-wrap">
+                  <div class="banner-content text-center">
+                      <img src="../../static/assets/images/popup/newsletter/logo.png" class="logo" alt="logo" width="60" height="15">
+                      <h2 class="banner-title">get <span>25<light>%</light></span> off</h2>
+                      <p>Subscribe to the Molla eCommerce newsletter to receive timely updates from your favorite products.</p>
+                      <form action="#">
+                          <div class="input-group input-group-round">
+                              <input type="email" class="form-control form-control-white" placeholder="Your Email Address" aria-label="Email Adress" required>
+                              <div class="input-group-append">
+                                  <button class="btn" type="submit"><span>go</span></button>
+                              </div><!-- .End .input-group-append -->
+                          </div><!-- .End .input-group -->
+                      </form>
+                      <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="register-policy-2" required>
+                          <label class="custom-control-label" for="register-policy-2">Do not show this popup again</label>
+                      </div><!-- End .custom-checkbox -->
+                  </div>
+              </div>
+              <div class="col-xl-2-5col col-lg-5 ">
+                  <img src="../../static/assets/images/popup/newsletter/img-1.jpg" class="newsletter-img" alt="newsletter">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Plugins JS File -->
+<script src="../../static/assets/js/jquery.min.js"></script>
+<script src="../../static/assets/js/bootstrap.bundle.min.js"></script>
+<script src="../../static/assets/js/jquery.hoverIntent.min.js"></script>
+<script src="../../static/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../static/assets/js/superfish.min.js"></script>
+<script src="../../static/assets/js/owl.carousel.min.js"></script>
+<script src="../../static/assets/js/jquery.plugin.min.js"></script>
+<script src="../../static/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../static/assets/js/jquery.countdown.min.js"></script>
+<!-- Main JS File -->
+<script src="../../static/assets/js/main.js"></script>
+<script src="../../static/assets/js/demos/demo-8.js"></script>
+
+{% comment %} 
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.hoverIntent.min.js"></script>
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<script src="assets/js/superfish.min.js"></script> {% endcomment %}
+{% comment %} <script src="assets/js/owl.carousel.min.js"></script> {% endcomment %}
+<script src="../../static/assets/js/wNumb.js"></script>
+<script src="../../static/assets/js/bootstrap-input-spinner.js"></script>
+{% comment %} <script src="assets/js/jquery.magnific-popup.min.js"></script> {% endcomment %}
+<script src="../../static/assets/js/nouislider.min.js"></script>
+
+<script src="assets/js/jquery.elevateZoom.min.js"></script>
+
+ <!-- Body Wrapper End Here -->
+        <!-- jQuery-V1.12.4 -->
+       
+</body>
+</html>

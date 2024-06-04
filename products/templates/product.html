@@ -1,0 +1,570 @@
+
+{% comment %} <div class="container-fluid"> {% endcomment %}
+
+{% comment %} <div class="">
+    <h1>Produits</h1>
+    <div class="row">
+    {% for instance in promo %}
+
+      <div class="col-md-4">
+        <div class="card" style="heigth: rem">
+          <img src="{{ instance.thumbnail.url }}" class="card-img-top" alt="{{ instance.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ instance.name }}</h5>
+            <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <p class="card-text">${{ instance.price }}</p>
+            <a href="{{ instance.get_absolute_url }}" class="btn btn-primary">voir detail</a>
+      
+            <a href="#" class="btn btn-primary">Acheter</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+    </div>
+</div> {% endcomment %}
+
+{% comment %} 
+
+  <div class="">
+      <h1>Produits</h1>
+      <div class="row">
+      {% for instance in object_list %}
+
+
+        <div class="col-md-4">
+          <div class="card" style="heigth: rem">
+            <img src="{{ instance.thumbnail.url }}" class="card-img-top" alt="{{ instance.name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ instance.name }}</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p class="card-text">${{ instance.price }}</p>
+              <a href="{{ instance.get_absolute_url }}" class="btn btn-primary">voir detail</a>
+
+              <a href="#" class="btn btn-primary">Acheter</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+  </div>
+
+
+</div> {% endcomment %}
+
+
+
+
+<main class="main">
+
+    <nav aria-label="miette de pain" class="breadcrumb-nav mb-2">
+        <div class="container-fluid">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Home</font></font></a></li>
+ 
+                <li class="breadcrumb-item active" aria-current="page"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Shop</font></font></li>
+            </ol>
+        </div>
+    </br>
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="banner">
+                    <a href="#">
+                        <img src="../../static/assets/images/banners/3cols/banner-1.jpg" alt="Banner">
+                    </a>
+
+                    <div class="banner-content">
+                        <h4 class="banner-subtitle">Quisque a lectus</h4><!-- End .banner-subtitle -->
+                        <h3 class="banner-title">Praesent elementum <br>hendrerit tortor.</h3><!-- End .banner-title -->
+                        <a href="#" class="banner-link">Click here</a>
+                    </div><!-- End .banner-content -->
+                </div><!-- End .banner -->
+           </div><!-- End .col-md-6 -->
+
+            <div class="col-md-6 col-lg-4">
+                <div class="banner">
+                    <a href="#">
+                        <img src="../../static/assets/images/banners/3cols/banner-2.jpg" alt="Banner">
+                    </a>
+
+                    <div class="banner-content">
+                        <h4 class="banner-subtitle">Quisque a lectus</h4><!-- End .banner-subtitle -->
+                        <h3 class="banner-title">Donec consectetuer <br>ligula vulputate.</h3><!-- End .banner-title -->
+                        <a href="#" class="banner-link">Click here</a>
+                    </div><!-- End .banner-content -->
+                </div><!-- End .banner -->
+            </div><!-- End .col-md-6 -->
+
+            <div class="col-md-6 col-lg-4">
+                <div class="banner">
+                    <a href="#">
+                        <img src="../../static/assets/images/banners/3cols/banner-3.jpg" alt="Banner">
+                    </a>
+
+                    <div class="banner-content">
+                        <h4 class="banner-subtitle">Quisque a lectus</h4><!-- End .banner-subtitle -->
+                        <h3 class="banner-title text-white">Phasellus ultrices <br>nulla quisnibh.</h3><!-- End .banner-title -->
+                        <a href="#" class="banner-link">Click here</a>
+                    </div><!-- End .banner-content -->
+                </div><!-- End .banner -->
+            </div><!-- End .col-md-6 -->
+        </div>
+      </div><!-- End .container-fluid -->
+  </nav><!-- End .breadcrumb-nav -->
+
+  <div class="page-content">
+      <div class="container-fluid">
+          <div class="toolbox">
+              <div class="toolbox-left">
+                  <a href="#" class="sidebar-toggler"><i class="icon-bars"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Filtres</font></font></a>
+              </div><!-- End .toolbox-left -->
+
+              <div class="toolbox-center">
+                  <div class="toolbox-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                      Affichage </font></font><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">de 12 sur 56</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> produits
+                  </font></font></div><!-- End .toolbox-info -->
+              </div><!-- End .toolbox-center -->
+
+              <div class="toolbox-right">
+                  <div class="toolbox-sort">
+                      <label for="sortby"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trier par:</font></font></label>
+                      <div class="select-custom">
+                          <select name="sortby" id="sortby" class="form-control">
+                              <option value="popularity" selected="selected"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Le plus populaire</font></font></option>
+                              <option value="rating"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Les plus notés</font></font></option>
+                              <option value="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Date</font></font></option>
+                          </select>
+                      </div>
+                  </div><!-- End .toolbox-sort -->
+              </div><!-- End .toolbox-right -->
+          </div><!-- End .toolbox -->
+
+        <div class="products">
+            <div class="row">
+              {% for instance in promo %}
+        
+                <div class="col-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2">
+                    <div class="product">
+                        <figure class="product-media">
+                            {% comment %} <span class="product-label label-new"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nouveau</font></font></span> {% endcomment %}
+                            <a href="{{ instance.thumbnail.url }}">
+                                {% comment %} <img src="../../static/assets/images/products/product-1.jpg" alt="Image du produit" class="product-image"> {% endcomment %}
+                                <img src="{{ instance.thumbnail.url }}" alt="{{ instance.name }}" class="product-image">
+        
+                            </a>
+        
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                            </div><!-- End .product-action -->
+        
+                            <div class="product-action action-icon-top">
+                                <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                {% comment %} <a href="popup/quickView.html" class="btn-product btn-quickview" title="Aperçu rapide"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">aperçu rapide</font></font></span></a> {% endcomment %}
+                                <a href="#" class="btn-product btn-quickview" title="Aperçu rapide"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">aperçu rapide</font></font></span></a>
+                                {% comment %} <a href="#" class="btn-product btn-compare" title="Comparer"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">comparer</font></font></span></a> {% endcomment %}
+                            </div><!-- End .product-action -->
+                        </figure><!-- End .product-media -->
+        
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ instance.categorie }}</font></font></a>
+                            </div><!-- End .product-cat -->
+                            <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ instance.name }}</font></font></a></h3><!-- End .product-title -->
+                            <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                              {{ instance.price }}&nbsp;$
+                            </font></font></div><!-- End .product-price -->
+                            <div class="ratings-container">
+                                <div class="ratings">
+                                    <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
+                                </div><!-- End .ratings -->
+                                {% comment %} <span class="ratings-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">( 0 Commentaires )</font></font></span> {% endcomment %}
+                            </div><!-- End .rating-container -->
+        
+                            {% comment %} <div class="product-nav product-nav-dots">
+                                <a href="#" style="background: #cc9966;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                                <a href="#" class="active" style="background: #ebebeb;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                            </div><!-- End .product-nav --> {% endcomment %}
+                        </div><!-- End .product-body -->
+                    </div><!-- End .product -->
+                </div><!-- End .col-sm-6 col-lg-4 col-xl-3 -->
+              {% endfor %}
+        
+      
+            
+            </div><!-- End .row -->
+        
+            <div class="row">
+        
+              {% for instance in object_list %}
+        
+                <div class="col-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2">
+                    <div class="product">
+                        <figure class="product-media">
+                            {% comment %} <span class="product-label label-new"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nouveau</font></font></span> {% endcomment %}
+                            <a href="product.html">
+                                {% comment %} <img src="../../static/assets/images/products/product-1.jpg" alt="Image du produit" class="product-image"> {% endcomment %}
+                                <img src="{{ instance.thumbnail.url }}" alt="{{ instance.name }}" class="product-image">
+        
+                            </a>
+        
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                            </div><!-- End .product-action -->
+        
+                            <div class="product-action action-icon-top">
+                                <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                {% comment %} <a href="popup/quickView.html" class="btn-product btn-quickview" title="Aperçu rapide"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">aperçu rapide</font></font></span></a> {% endcomment %}
+                                <a href="#" class="btn-product btn-quickview" title="Aperçu rapide"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">aperçu rapide</font></font></span></a>
+                                {% comment %} <a href="#" class="btn-product btn-compare" title="Comparer"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">comparer</font></font></span></a> {% endcomment %}
+                            </div><!-- End .product-action -->
+                        </figure><!-- End .product-media -->
+        
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ instance.categorie }}</font></font></a>
+                            </div><!-- End .product-cat -->
+                            <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ instance.name }}</font></font></a></h3><!-- End .product-title -->
+                            <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                              {{ instance.price }}&nbsp;$
+                            </font></font></div><!-- End .product-price -->
+                            <div class="ratings-container">
+                                <div class="ratings">
+                                    <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
+                                </div><!-- End .ratings -->
+                                <span class="ratings-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">( 0 Commentaires )</font></font></span>
+                            </div><!-- End .rating-container -->
+        
+                            <div class="product-nav product-nav-dots">
+                                <a href="#" style="background: #cc9966;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                                <a href="#" class="active" style="background: #ebebeb;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                            </div><!-- End .product-nav -->
+                        </div><!-- End .product-body -->
+                    </div><!-- End .product -->
+                </div><!-- End .col-sm-6 col-lg-4 col-xl-3 -->
+              {% endfor %}
+            
+            </div>  <!-- End .row -->
+        
+          <div class="load-more-container text-center">
+        
+            <div class="pagination">
+              {% comment %} <a href="#" class="btn btn-outline-darker btn-load-more"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                <span class="step-links">
+                    {% if object_list.has_previous %}
+                        <a href="?page=1">&laquo; première</a>
+                        <a href="?page={{ object_list.previous_page_number }}">précédente</a>
+                    {% endif %}
+          
+                    <span class="current">
+                        Page {{ object_list.number }} sur {{ object_list.paginator.num_pages }}.
+                    </span>
+          
+                    {% if object_list.has_next %}
+                        <a href="?page={{ object_list.next_page_number }}">suivante</a>
+                        <a href="?page={{ object_list.paginator.num_pages }}">dernière &raquo;</a>
+                    {% endif %}
+                </span>
+            
+              </font></font><i class="icon-refresh"></i></a> {% endcomment %}
+              <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item">
+      
+                      {% if object_list.has_previous %}
+
+                      
+
+                      <a class="page-link page-link-prev" href="?page={{ object_list.previous_page_number }}" aria-label="Previous" tabindex="-1" >
+                        Prev<span aria-hidden="true"><i class="icon-long-arrow-left"></i></span>
+                      </a>
+                      {% comment %} <a href="?page=1">&laquo; première</a>
+                      <a href="?page={{ object_list.previous_page_number }}">précédente</a> {% endcomment %}
+                      {% endif %}
+                      {% comment %}                 
+                      <span class="current">
+                        Page {{ object_list.number }} sur {{ object_list.paginator.num_pages }}.
+                      </span> {% endcomment %}
+          
+      
+                    </li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">{{ object_list.number }}</a></li>
+                    {% comment %} <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li> {% endcomment %}
+                    <li class="page-item-total">of {{ object_list.paginator.num_pages }}</li>
+                    <li class="page-item">
+                      {% if object_list.has_next %}
+      
+                      <a class="page-link page-link-next" href="?page={{ object_list.next_page_number }}" aria-label="Next">
+                        Next <span aria-hidden="true"><i class="icon-long-arrow-right"></i></span>
+                      </a>
+      
+                      {% comment %} <a class="page-link page-link-previous" href="?page={{ object_list.paginator.num_pages }}" aria-label="Previous">
+                        Previous <span aria-hidden="true"><i class="icon-long-arrow-right"></i></span>
+                      </a> {% endcomment %}
+                      
+                             
+                    {% endif %}
+                        
+                    </li>
+                </ul>
+              </nav>
+
+          </div><!-- End .load-more-container -->
+        </div><!-- End .products -->
+
+        
+
+          {% comment %} <div class="sidebar-filter-overlay"></div><!-- End .sidebar-filter-overlay --> {% endcomment %}
+          {% comment %} <aside class="sidebar-shop sidebar-filter"> {% endcomment %}
+              {% comment %} <div class="sidebar-filter-wrapper">
+                  <div class="widget widget-clean">
+                      <label><i class="icon-close"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Filtres</font></font></label>
+                      <a href="#" class="sidebar-filter-clear"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nettoie tout</font></font></a>
+                  </div><!-- End .widget -->
+                  <div class="widget widget-collapsible">
+                      <h3 class="widget-title">
+                          <a data-toggle="collapse" href="#widget-1" role="button" aria-expanded="true" aria-controls="widget-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                              Catégorie
+                          </font></font></a>
+                      </h3><!-- End .widget-title -->
+
+                      <div class="collapse show" id="widget-1">
+                          <div class="widget-body">
+                              <div class="filter-items filter-items-count">
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="cat-1">
+                                          <label class="custom-control-label" for="cat-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Robes</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                      <span class="item-count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></span>
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="cat-2">
+                                          <label class="custom-control-label" for="cat-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">T-shirts</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                      <span class="item-count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></span>
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="cat-3">
+                                          <label class="custom-control-label" for="cat-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sacs</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                      <span class="item-count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></span>
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="cat-4">
+                                          <label class="custom-control-label" for="cat-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vestes</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                      <span class="item-count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></span>
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="cat-5">
+                                          <label class="custom-control-label" for="cat-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chaussures</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                      <span class="item-count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></span>
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="cat-6">
+                                          <label class="custom-control-label" for="cat-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pulls</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                      <span class="item-count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></span>
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="cat-7">
+                                          <label class="custom-control-label" for="cat-7"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jeans</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                      <span class="item-count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></span>
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="cat-8">
+                                          <label class="custom-control-label" for="cat-8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtement de sport</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                      <span class="item-count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></span>
+                                  </div><!-- End .filter-item -->
+                              </div><!-- End .filter-items -->
+                          </div><!-- End .widget-body -->
+                      </div><!-- End .collapse -->
+                  </div><!-- End .widget -->
+
+                  <div class="widget widget-collapsible">
+                      <h3 class="widget-title">
+                          <a data-toggle="collapse" href="#widget-2" role="button" aria-expanded="true" aria-controls="widget-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                              Taille
+                          </font></font></a>
+                      </h3><!-- End .widget-title -->
+
+                      <div class="collapse show" id="widget-2">
+                          <div class="widget-body">
+                              <div class="filter-items">
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="size-1">
+                                          <label class="custom-control-label" for="size-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">XS</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="size-2">
+                                          <label class="custom-control-label" for="size-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">S</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" checked="" id="size-3">
+                                          <label class="custom-control-label" for="size-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">M</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" checked="" id="size-4">
+                                          <label class="custom-control-label" for="size-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">L</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="size-5">
+                                          <label class="custom-control-label" for="size-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">XL</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="size-6">
+                                          <label class="custom-control-label" for="size-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">XXL</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+                              </div><!-- End .filter-items -->
+                          </div><!-- End .widget-body -->
+                      </div><!-- End .collapse -->
+                  </div><!-- End .widget -->
+
+                  <div class="widget widget-collapsible">
+                      <h3 class="widget-title">
+                          <a data-toggle="collapse" href="#widget-3" role="button" aria-expanded="true" aria-controls="widget-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                              Couleur
+                          </font></font></a>
+                      </h3><!-- End .widget-title -->
+
+                      <div class="collapse show" id="widget-3">
+                          <div class="widget-body">
+                              <div class="filter-colors">
+                                  <a href="#" style="background: #b87145;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                                  <a href="#" style="background: #f0c04a;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                                  <a href="#" style="background: #333333;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                                  <a href="#" class="selected" style="background: #cc3333;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                                  <a href="#" style="background: #3399cc;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                                  <a href="#" style="background: #669933;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                                  <a href="#" style="background: #f2719c;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                                  <a href="#" style="background: #ebebeb;"><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nom de la couleur</font></font></span></a>
+                              </div><!-- End .filter-colors -->
+                          </div><!-- End .widget-body -->
+                      </div><!-- End .collapse -->
+                  </div><!-- End .widget -->
+
+                  <div class="widget widget-collapsible">
+                      <h3 class="widget-title">
+                          <a data-toggle="collapse" href="#widget-4" role="button" aria-expanded="true" aria-controls="widget-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                              Marque
+                          </font></font></a>
+                      </h3><!-- End .widget-title -->
+
+                      <div class="collapse show" id="widget-4">
+                          <div class="widget-body">
+                              <div class="filter-items">
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="brand-1">
+                                          <label class="custom-control-label" for="brand-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Suivant</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="brand-2">
+                                          <label class="custom-control-label" for="brand-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">River Island</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="brand-3">
+                                          <label class="custom-control-label" for="brand-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Géox</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="brand-4">
+                                          <label class="custom-control-label" for="brand-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nouvel équilibre</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="brand-5">
+                                          <label class="custom-control-label" for="brand-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">UGG</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="brand-6">
+                                          <label class="custom-control-label" for="brand-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">F&amp;F</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                                  <div class="filter-item">
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="brand-7">
+                                          <label class="custom-control-label" for="brand-7"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nike</font></font></label>
+                                      </div><!-- End .custom-checkbox -->
+                                  </div><!-- End .filter-item -->
+
+                              </div><!-- End .filter-items -->
+                          </div><!-- End .widget-body -->
+                      </div><!-- End .collapse -->
+                  </div><!-- End .widget -->
+
+                  <div class="widget widget-collapsible">
+                      <h3 class="widget-title">
+                          <a data-toggle="collapse" href="#widget-5" role="button" aria-expanded="true" aria-controls="widget-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                              Prix
+                          </font></font></a>
+                      </h3><!-- End .widget-title -->
+
+                      <div class="collapse show" id="widget-5">
+                          <div class="widget-body">
+                              <div class="filter-price">
+                                  <div class="filter-price-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                      Fourchette de prix&nbsp;:
+                                      </font></font><span id="filter-price-range"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp;0&nbsp;$&nbsp;à&nbsp;750&nbsp;$</font></font></span>
+                                  </div><!-- End .filter-price-text -->
+
+                                  <div id="price-slider" class="noUi-target noUi-ltr noUi-horizontal"><div class="noUi-base"><div class="noUi-connects"><div class="noUi-connect" style="transform: translate(0%, 0px) scale(0.75, 1);"></div></div><div class="noUi-origin" style="transform: translate(-100%, 0px); z-index: 5;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="550.0" aria-valuenow="0.0" aria-valuetext="0&nbsp;$"><div class="noUi-touch-area"></div><div class="noUi-tooltip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0&nbsp;$</font></font></div></div></div><div class="noUi-origin" style="transform: translate(-25%, 0px); z-index: 4;"><div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="200.0" aria-valuemax="1000.0" aria-valuenow="750.0" aria-valuetext="750&nbsp;$"><div class="noUi-touch-area"></div><div class="noUi-tooltip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">750&nbsp;$</font></font></div></div></div></div></div><!-- End #price-slider -->
+                              </div><!-- End .filter-price -->
+                          </div><!-- End .widget-body -->
+                      </div><!-- End .collapse -->
+                  </div><!-- End .widget -->
+              </div><!-- End .sidebar-filter-wrapper --> {% endcomment %}
+          {% comment %} </aside><!-- End .sidebar-filter --> {% endcomment %}
+      </div><!-- End .container-fluid -->
+  </div><!-- End .page-content -->
+</main>

@@ -1,0 +1,25 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+	<div>
+
+		{% if not user.is_authenticated %}
+			<button type="submit"><a href="{% url 'connexion' %}">login</a></button>
+			<button type="submit"><a href="{% url 'signup' %}">signup</a></button>
+		{% else %}
+			<p> bonjour {{ user.username }}  </p>
+			<button type="submit"><a href="{% url 'signout' %}">logout</a></button>
+		{% endif %}
+	</div>
+    <div class="row">
+    {% for instance in object_list %}
+      <h1>{{ instance.id }}  -  {{ instance.name }}   {{ instance.price }}<em>$</em>    <em>stocks : </em> {{ instance.stock }} <em>category : </em> {{ instance.category }}</h1>
+
+        <button type="submit"><a href="{% url 'deleteview' instance.slug %}"> DeleteArticle </a></button>
+        <button type="submit"><a href="{% url 'updateview' instance.slug  %}"> UpdateArticle </a></button>
+
+      <a href="{{ instance.get_absolute_url }}"> voir detail</a>
+    {% endfor %}
+        <button type="submit"><a href="{% url 'createview' %}"> Create </a></button>
+    </div>
+{% endblock %}

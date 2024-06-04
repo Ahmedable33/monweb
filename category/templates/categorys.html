@@ -1,0 +1,14 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+ <h2> Bienvenue dans ma boutique </h2>
+    <div class="row">
+    {% for instance in object_list %}
+      <h1> {{ instance.name }}</h1>
+        <a href="{{ instance.get_absolute_url }}">
+      <img src="{{ instance.thumbnail.url }}" alt="{{ instance.name }}"></a>
+      <p> {{ instance.price }}</p>
+      <a href="{{ instance.get_absolute_url }}"> voir detail</a>
+    {% endfor %}
+    </div>
+{% endblock %}

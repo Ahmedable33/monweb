@@ -1,0 +1,17 @@
+{% extends 'base_admin.html' %}
+
+{% block content %}
+
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{ form.as_div }}
+
+        <button value="valid">Valide</button>
+    </form>
+    {% if request.resolver_match.url_name == 'createview' %}
+
+    <a href="{% url 'categoryview' %}">Create Category</a>
+
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'mails/BaseMail.html' %}
+
+{% block mail %}
+  <h2>Envoi d'Email</h2>
+  <form method="post" action="{% url 'mail' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Envoyer</button>
+  </form>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base_admin.html' %}
+
+{% block content %}
+    <p> My articles </p>
+{#    {% if perms.app_admin.my_articles %}#}
+        {% for product in products %}
+            {{ product.name }}
+        {% endfor %}
+{#    {% else %}#}
+        <p> Vous n'avez pas la permission </p>
+{#    {% endif %}#}
+
+{% endblock %}

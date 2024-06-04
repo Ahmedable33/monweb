@@ -1,0 +1,1310 @@
+{% extends 'base1.html' %}
+
+{% block title %}MOLLA | My Shop{% endblock %}
+
+
+{% block active %}active{% endblock %}
+{% block active01 %}active{% endblock %}
+
+{% block connecte %}
+
+{% endblock %} 
+{% block connecte1 %}
+<ul>
+    {% if not user.is_authenticated %}
+    <li>
+      <a href="{% url 'connexion' %}" class="">Login</a>
+    </li>
+    <li>
+        <a href="{% url 'signup' %}" class="">Sign up</a>
+    </li>
+    {% else %}
+    <li>
+        <a href="{% url 'dashboard' %}" class="">Dashboard</a>
+    </li>
+    <li>
+        <a href="{% url 'signout' %}" class="">signout</a>
+    </li>
+  {% endif %}
+ </ul>
+{% endblock %} 
+
+{% block boutique %}
+
+{% for instance in object %}
+
+
+
+
+
+<main class="main">
+    <div class="intro-slider-container">
+        <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light mb-0 owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                &quot;dots&quot;: true,
+                &quot;nav&quot;: false, 
+                &quot;responsive&quot;: {
+                    &quot;1200&quot;: {
+                        &quot;nav&quot;: true,
+                        &quot;dots&quot;: false
+                    }
+                }
+            }">
+            <!-- End .intro-slide -->
+
+            <!-- End .intro-slide -->
+        <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2702px, 0px, 0px); transition: all 0s ease 0s; width: 8106px;"><div class="owl-item cloned" style="width: 1351px;"><div class="intro-slide" style="background-image: url(../../static/assets/images/demos/demo-8/slider/slide-1.jpg);">
+                <div class="container intro-content text-left">
+                    <h3 class="intro-subtitle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Temps limité seulement *</font></font></h3><!-- End .h3 intro-subtitle -->
+                    <h1 class="intro-title"><font style="vertical-align: inherit;"><strong><font style="vertical-align: inherit;">Solde</font></strong><font style="vertical-align: inherit;"> d'été</font></font><br><strong><font style="vertical-align: inherit;"></font></strong></h1><!-- End .intro-title -->
+                    <h3 class="intro-subtitle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jusqu'à 50% de réduction</font></font></h3><!-- End .h3 intro-subtitle -->
+
+                    <a href="{% url 'product' %}" class="btn">
+                        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ACHETEZ MAINTENANT</font></font></span>
+                        <i class="icon-long-arrow-right"></i>
+                    </a>
+                </div><!-- End .intro-content -->
+                <img class="position-right" src="../../static/assets/images/demos/demo-8/slider/img-1.png">
+            </div></div><div class="owl-item cloned" style="width: 1351px;"><div class="intro-slide" style="background-image: url(../../static/assets/images/demos/demo-8/slider/slide-2.jpg);">
+                <div class="container intro-content text-right">
+                    <h3 class="intro-subtitle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">QUALITÉ SUPÉRIEURE</font></font></h3><!-- End .h3 intro-subtitle -->
+                    <h1 class="intro-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">manteaux </font></font><span class="highlight"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">et</font></font></span><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> vestes</font></font></h1><!-- End .intro-title -->
+
+                    <a href="{% url 'product' %}" class="btn">
+                        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ACHETEZ MAINTENANT</font></font></span>
+                        <i class="icon-long-arrow-right"></i>
+                    </a>
+                </div><!-- End .intro-content -->
+                <img class="position-left" src="../../static/assets/images/demos/demo-8/slider/img-2.png">
+            </div></div><div class="owl-item active" style="width: 1351px;"><div class="intro-slide" style="background-image: url(../../static/assets/images/demos/demo-8/slider/slide-1.jpg);">
+                <div class="container intro-content text-left">
+                    <h3 class="intro-subtitle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Temps limité seulement *</font></font></h3><!-- End .h3 intro-subtitle -->
+                    <h1 class="intro-title"><font style="vertical-align: inherit;"><strong><font style="vertical-align: inherit;">Solde</font></strong><font style="vertical-align: inherit;"> d'été</font></font><br><strong><font style="vertical-align: inherit;"></font></strong></h1><!-- End .intro-title -->
+                    <h3 class="intro-subtitle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jusqu'à 50% de réduction</font></font></h3><!-- End .h3 intro-subtitle -->
+
+                    <a href="{% url 'product' %}" class="btn">
+                        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ACHETEZ MAINTENANT</font></font></span>
+                        <i class="icon-long-arrow-right"></i>
+                    </a>
+                </div><!-- End .intro-content -->
+                <img class="position-right" src="../../static/assets/images/demos/demo-8/slider/img-1.png">
+            </div></div><div class="owl-item" style="width: 1351px;"><div class="intro-slide" style="background-image: url(../../static/assets/images/demos/demo-8/slider/slide-2.jpg);">
+                <div class="container intro-content text-right">
+                    <h3 class="intro-subtitle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">QUALITÉ SUPÉRIEURE</font></font></h3><!-- End .h3 intro-subtitle -->
+                    <h1 class="intro-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">manteaux </font></font><span class="highlight"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">et</font></font></span><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> vestes</font></font></h1><!-- End .intro-title -->
+
+                    <a href="{% url 'product' %}" class="btn">
+                        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ACHETEZ MAINTENANT</font></font></span>
+                        <i class="icon-long-arrow-right"></i>
+                    </a>
+                </div><!-- End .intro-content -->
+                <img class="position-left" src="../../static/assets/images/demos/demo-8/slider/img-2.png">
+            </div></div><div class="owl-item cloned" style="width: 1351px;"><div class="intro-slide" style="background-image: url(../../static/assets/images/demos/demo-8/slider/slide-1.jpg);">
+                <div class="container intro-content text-left">
+                    <h3 class="intro-subtitle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Temps limité seulement *</font></font></h3><!-- End .h3 intro-subtitle -->
+                    <h1 class="intro-title"><font style="vertical-align: inherit;"><strong><font style="vertical-align: inherit;">Solde</font></strong><font style="vertical-align: inherit;"> d'été</font></font><br><strong><font style="vertical-align: inherit;"></font></strong></h1><!-- End .intro-title -->
+                    <h3 class="intro-subtitle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jusqu'à 50% de réduction</font></font></h3><!-- End .h3 intro-subtitle -->
+
+                    <a href="{% url 'product' %}" class="btn">
+                        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ACHETEZ MAINTENANT</font></font></span>
+                        <i class="icon-long-arrow-right"></i>
+                    </a>
+                </div><!-- End .intro-content -->
+                <img class="position-right" src="../../static/assets/images/demos/demo-8/slider/img-1.png">
+            </div></div><div class="owl-item cloned" style="width: 1351px;"><div class="intro-slide" style="background-image: url(../../static/assets/images/demos/demo-8/slider/slide-2.jpg);">
+                <div class="container intro-content text-right">
+                    <h3 class="intro-subtitle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">QUALITÉ SUPÉRIEURE</font></font></h3><!-- End .h3 intro-subtitle -->
+                    <h1 class="intro-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">manteaux </font></font><span class="highlight"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">et</font></font></span><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> vestes</font></font></h1><!-- End .intro-title -->
+
+                    <a href="{% url 'product' %}" class="btn">
+                        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ACHETEZ MAINTENANT</font></font></span>
+                        <i class="icon-long-arrow-right"></i>
+                    </a>
+                </div><!-- End .intro-content -->
+                <img class="position-left" src="../../static/assets/images/demos/demo-8/slider/img-2.png">
+            </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div></div><!-- End .intro-slider owl-carousel owl-simple -->
+
+        <span class="slider-loader"></span><!-- End .slider-loader -->
+    </div><!-- End .intro-slider-container -->
+
+    <div class="pt-2 pb-2">
+        <div class="container brands">
+            <div class="banner-group">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="banner banner-overlay">
+                            <a href="#">
+                                <img src="../../static/assets/images/demos/demo-8/banners/banner-1.jpg" alt="Bannière">
+                            </a>
+
+                            <div class="banner-content">
+                                <h4 class="banner-subtitle"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Réduction finale</font></font></a></h4><!-- End .banner-subtitle -->
+                                <h3 class="banner-title"><a href="#"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sandales et </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">tongs</font></font></strong> <br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> jusqu'à 60% de réduction</font></font></a></h3><!-- End .banner-title -->
+                                <a href="{% url 'product' %}" class="btn btn-outline-white banner-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Achetez maintenant</font></font><i class="icon-long-arrow-right"></i></a>
+                            </div><!-- End .banner-content -->
+                        </div><!-- End .banner -->
+                    </div><!-- End .col-lg-4 -->
+
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="banner banner-overlay">
+                            <a href="#">
+                                <img src="../../static/assets/images/demos/demo-8/banners/banner-2.jpg" alt="Bannière">
+                            </a>
+
+                            <div class="banner-content">
+                                <h4 class="banner-subtitle"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Temps limité seulement.</font></font></a></h4><!-- End .banner-subtitle -->
+                                <h3 class="banner-title"><a href="#"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Baskets et </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">vêtements de sport</font></font></strong> <br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 40 -70%</font></font></a></h3><!-- End .banner-title -->
+                                <a href="{% url 'product' %}" class="btn btn-outline-white banner-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Achetez maintenant</font></font><i class="icon-long-arrow-right"></i></a>
+                            </div><!-- End .banner-content -->
+                        </div><!-- End .banner -->
+                    </div><!-- End .col-lg-4 -->
+
+                    <div class="col-sm-6 col-lg-4 d-none d-lg-block">
+                        <div class="banner banner-overlay">
+                            <a href="#">
+                                <img src="../../static/assets/images/demos/demo-8/banners/banner-3.jpg" alt="Bannière">
+                            </a>
+
+                            <div class="banner-content">
+                                <h4 class="banner-subtitle"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cette semaine, nous aimons...</font></font></a></h4><!-- End .banner-subtitle -->
+                                <h3 class="banner-title"><a href="#"><strong><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Accessoires </font><font style="vertical-align: inherit;">pour femmes</font></font></strong> <br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> à partir de 6,99&nbsp;$</font></font></a></h3><!-- End .banner-title -->
+                                <a href="{% url 'product' %}" class="btn btn-outline-white banner-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Achetez maintenant</font></font><i class="icon-long-arrow-right"></i></a>
+                            </div><!-- End .banner-content -->
+                        </div><!-- End .banner -->
+                    </div><!-- End .col-lg-4 -->
+                </div><!-- End .row -->
+            </div><!-- End .banner-group -->
+
+            <div class="owl-carousel mt-3 mb-3 owl-simple owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                    &quot;nav&quot;: false, 
+                    &quot;dots&quot;: false,
+                    &quot;margin&quot;: 30,
+                    &quot;loop&quot;: false,
+                    &quot;responsive&quot;: {
+                        &quot;0&quot;: {
+                            &quot;items&quot;:2
+                        },
+                        &quot;420&quot;: {
+                            &quot;items&quot;:3
+                        },
+                        &quot;600&quot;: {
+                            &quot;items&quot;:4
+                        },
+                        &quot;900&quot;: {
+                            &quot;items&quot;:5
+                        },
+                        &quot;1024&quot;: {
+                            &quot;items&quot;:6
+                        }
+                    }
+                }">
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1398px;"><div class="owl-item active" style="width: 169.667px; margin-right: 30px;"><a href="#" class="brand">
+                    <img src="../../static/assets/images/brands/1.png" alt="Marque">
+                </a></div><div class="owl-item active" style="width: 169.667px; margin-right: 30px;"><a href="#" class="brand">
+                    <img src="../../static/assets/images/brands/2.png" alt="Marque">
+                </a></div><div class="owl-item active" style="width: 169.667px; margin-right: 30px;"><a href="#" class="brand">
+                    <img src="../../static/assets/images/brands/3.png" alt="Marque">
+                </a></div><div class="owl-item active" style="width: 169.667px; margin-right: 30px;"><a href="#" class="brand">
+                    <img src="../../static/assets/images/brands/4.png" alt="Marque">
+                </a></div><div class="owl-item active" style="width: 169.667px; margin-right: 30px;"><a href="#" class="brand">
+                    <img src="../../static/assets/images/brands/5.png" alt="Marque">
+                </a></div><div class="owl-item active" style="width: 169.667px; margin-right: 30px;"><a href="#" class="brand">
+                    <img src="../../static/assets/images/brands/6.png" alt="Marque">
+                </a></div><div class="owl-item" style="width: 169.667px; margin-right: 30px;"><a href="#" class="brand">
+                    <img src="../../static/assets/images/brands/7.png" alt="Marque">
+                </a></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div></div><!-- End .owl-carousel -->
+        </div><!-- End .container -->
+    </div><!-- End .bg-lighter -->
+
+    <div class="mb-3"></div><!-- End .mb-6 -->
+
+    <div class="container">
+        <ul class="nav nav-pills nav-big nav-border-anim justify-content-center mb-2 mb-md-3" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="products-featured-link" data-toggle="tab" href="#products-featured-tab" role="tab" aria-controls="products-featured-tab" aria-selected="true"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En vedette</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="products-sale-link" data-toggle="tab" href="#products-sale-tab" role="tab" aria-controls="products-sale-tab" aria-selected="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En soldes</font></font></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="products-top-link" data-toggle="tab" href="#products-top-tab" role="tab" aria-controls="products-top-tab" aria-selected="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Les mieux notés</font></font></a>
+            </li>
+        </ul>
+
+        <div class="tab-content tab-content-carousel">
+            <div class="tab-pane p-0 fade show active" id="products-featured-tab" role="tabpanel" aria-labelledby="products-featured-link">
+                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                        &quot;nav&quot;: false, 
+                        &quot;dots&quot;: true,
+                        &quot;margin&quot;: 20,
+                        &quot;loop&quot;: false,
+                        &quot;responsive&quot;: {
+                            &quot;0&quot;: {
+                                &quot;items&quot;:2
+                            },
+                            &quot;480&quot;: {
+                                &quot;items&quot;:2
+                            },
+                            &quot;768&quot;: {
+                                &quot;items&quot;:3
+                            },
+                            &quot;992&quot;: {
+                                &quot;items&quot;:4
+                            },
+                            &quot;1200&quot;: {
+                                &quot;items&quot;:4,
+                                &quot;nav&quot;: true,
+                                &quot;dots&quot;: false
+                            }
+                        }
+                    }">
+                    <!-- End .product -->
+
+                    <!-- End .product -->
+
+                    <!-- End .product -->
+
+                    <!-- End .product -->
+
+                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1188px;"><div class="owl-item active" style="width: 277px; margin-right: 20px;"><div class="product product-2">
+                        <figure class="product-media">
+                            <a href="product.html">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-1-1.jpg" alt="Image du produit" class="product-image">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-1-2.jpg" alt="Image du produit" class="product-image-hover">
+                            </a>
+
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable" title="Ajouter à la liste de souhaits"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                            </div><!-- End .product-action -->
+
+                            <div class="product-action ">
+                                <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                            </div><!-- End .product-action -->
+                        </figure><!-- End .product-media -->
+
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                            </div><!-- End .product-cat -->
+                            <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Veste en jean</font></font></a></h3><!-- End .product-title -->
+                            <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                19,99&nbsp;$
+                            </font></font></div><!-- End .product-price -->
+                            <div class="product-nav product-nav-thumbs">
+                                <a href="#" class="active">
+                                    <img src="../../static/assets/images/demos/demo-8/products/product-1-thumb.jpg" alt="description du produit">
+                                </a>
+                                <a href="#">
+                                    <img src="../../static/assets/images/demos/demo-8/products/product-1-2-thumb.jpg" alt="description du produit">
+                                </a>
+                                <a href="#">
+                                    <img src="../../static/assets/images/demos/demo-8/products/product-1-3-thumb.jpg" alt="description du produit">
+                                </a>
+                            </div>
+
+                        </div><!-- End .product-body -->
+                    </div></div><div class="owl-item active" style="width: 277px; margin-right: 20px;"><div class="product product-2">
+                        <figure class="product-media">
+                            <a href="product.html">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-2-1.jpg" alt="Image du produit" class="product-image">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-2-2.jpg" alt="Image du produit" class="product-image-hover">
+                            </a>
+
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable" title="Ajouter à la liste de souhaits"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                            </div><!-- End .product-action -->
+
+                            <div class="product-action ">
+                                <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                            </div><!-- End .product-action -->
+                        </figure><!-- End .product-media -->
+
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chaussures</font></font></a>
+                            </div><!-- End .product-cat -->
+                            <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Des sandales</font></font></a></h3><!-- End .product-title -->
+                            <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                24,99&nbsp;$
+                            </font></font></div><!-- End .product-price -->
+                        </div><!-- End .product-body -->
+                    </div></div><div class="owl-item active" style="width: 277px; margin-right: 20px;"><div class="product product-2">
+                        <figure class="product-media">
+                            <span class="product-label label-sale"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">vente</font></font></span>
+                            <a href="product.html">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-3-1.jpg" alt="Image du produit" class="product-image">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-3-2.jpg" alt="Image du produit" class="product-image-hover">
+                            </a>
+
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable" title="Ajouter à la liste de souhaits"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                            </div><!-- End .product-action -->
+
+                            <div class="product-action ">
+                                <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                            </div><!-- End .product-action -->
+                        </figure><!-- End .product-media -->
+
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                            </div><!-- End .product-cat -->
+                            <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sweat imprimé</font></font></a></h3><!-- End .product-title -->
+                            <div class="product-price">
+                                <span class="new-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maintenant 7,99 $</font></font></span>
+                                <span class="old-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Était 12,99&nbsp;$</font></font></span>
+                            </div><!-- End .product-price -->
+                        </div><!-- End .product-body -->
+                    </div></div><div class="owl-item active" style="width: 277px; margin-right: 20px;"><div class="product product-2">
+                        <figure class="product-media">
+                            <a href="product.html">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-4-1.jpg" alt="Image du produit" class="product-image">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-4-2.jpg" alt="Image du produit" class="product-image-hover">
+                            </a>
+
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable" title="Ajouter à la liste de souhaits"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                            </div><!-- End .product-action -->
+
+                            <div class="product-action ">
+                                <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                            </div><!-- End .product-action -->
+                        </figure><!-- End .product-media -->
+
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                            </div><!-- End .product-cat -->
+                            <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pantalon paper bag en lin mélangé</font></font></a></h3><!-- End .product-title -->
+                            <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                17,99&nbsp;$
+                            </font></font></div><!-- End .product-price -->
+                            <div class="product-nav product-nav-thumbs">
+                                <a href="#" class="active">
+                                    <img src="../../static/assets/images/demos/demo-8/products/product-4-thumb.jpg" alt="description du produit">
+                                </a>
+                                <a href="#">
+                                    <img src="../../static/assets/images/demos/demo-8/products/product-4-2-thumb.jpg" alt="description du produit">
+                                </a>
+                            </div>
+
+                        </div><!-- End .product-body -->
+                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div></div><!-- End .owl-carousel -->
+            </div><!-- .End .tab-pane -->
+            <div class="tab-pane p-0 fade" id="products-sale-tab" role="tabpanel" aria-labelledby="products-sale-link">
+                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                        &quot;nav&quot;: false, 
+                        &quot;dots&quot;: true,
+                        &quot;margin&quot;: 20,
+                        &quot;loop&quot;: false,
+                        &quot;responsive&quot;: {
+                            &quot;0&quot;: {
+                                &quot;items&quot;:1
+                            },
+                            &quot;480&quot;: {
+                                &quot;items&quot;:2
+                            },
+                            &quot;768&quot;: {
+                                &quot;items&quot;:3
+                            },
+                            &quot;992&quot;: {
+                                &quot;items&quot;:4
+                            },
+                            &quot;1200&quot;: {
+                                &quot;items&quot;:4,
+                                &quot;nav&quot;: true,
+                                &quot;dots&quot;: false
+                            }
+                        }
+                    }">
+                    <!-- End .product -->
+
+                    <!-- End .product -->
+                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 594px;"><div class="owl-item active" style="width: 277px; margin-right: 20px;"><div class="product product-2">
+                        <figure class="product-media">
+                            <a href="product.html">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-2-1.jpg" alt="Image du produit" class="product-image">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-2-2.jpg" alt="Image du produit" class="product-image-hover">
+                            </a>
+
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable" title="Ajouter à la liste de souhaits"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                            </div><!-- End .product-action -->
+
+                            <div class="product-action ">
+                                <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                            </div><!-- End .product-action -->
+                        </figure><!-- End .product-media -->
+
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chaussures</font></font></a>
+                            </div><!-- End .product-cat -->
+                            <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Des sandales</font></font></a></h3><!-- End .product-title -->
+                            <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                24,99&nbsp;$
+                            </font></font></div><!-- End .product-price -->
+                        </div><!-- End .product-body -->
+                    </div></div><div class="owl-item active" style="width: 277px; margin-right: 20px;"><div class="product product-2">
+                        <figure class="product-media">
+                            <span class="product-label label-sale"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">vente</font></font></span>
+                            <a href="product.html">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-3-1.jpg" alt="Image du produit" class="product-image">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-3-2.jpg" alt="Image du produit" class="product-image-hover">
+                            </a>
+
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable" title="Ajouter à la liste de souhaits"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                            </div><!-- End .product-action -->
+
+                            <div class="product-action ">
+                                <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                            </div><!-- End .product-action -->
+                        </figure><!-- End .product-media -->
+
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                            </div><!-- End .product-cat -->
+                            <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sweat imprimé</font></font></a></h3><!-- End .product-title -->
+                            <div class="product-price">
+                                <span class="new-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maintenant 7,99 $</font></font></span>
+                                <span class="old-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Était 12,99&nbsp;$</font></font></span>
+                            </div><!-- End .product-price -->
+                        </div><!-- End .product-body -->
+                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div></div><!-- End .owl-carousel -->
+            </div><!-- .End .tab-pane -->
+            <div class="tab-pane p-0 fade" id="products-top-tab" role="tabpanel" aria-labelledby="products-top-link">
+                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+                        &quot;nav&quot;: false, 
+                        &quot;dots&quot;: true,
+                        &quot;margin&quot;: 20,
+                        &quot;loop&quot;: false,
+                        &quot;responsive&quot;: {
+                            &quot;0&quot;: {
+                                &quot;items&quot;:1
+                            },
+                            &quot;480&quot;: {
+                                &quot;items&quot;:2
+                            },
+                            &quot;768&quot;: {
+                                &quot;items&quot;:3
+                            },
+                            &quot;992&quot;: {
+                                &quot;items&quot;:4
+                            },
+                            &quot;1200&quot;: {
+                                &quot;items&quot;:4,
+                                &quot;nav&quot;: true,
+                                &quot;dots&quot;: false
+                            }
+                        }
+                    }">
+
+                    <!-- End .product -->
+
+                    <!-- End .product -->
+
+                    <!-- End .product -->
+                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 891px;"><div class="owl-item active" style="width: 277px; margin-right: 20px;"><div class="product product-2">
+                        <figure class="product-media">
+                            <a href="product.html">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-2-1.jpg" alt="Image du produit" class="product-image">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-2-2.jpg" alt="Image du produit" class="product-image-hover">
+                            </a>
+
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable" title="Ajouter à la liste de souhaits"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                            </div><!-- End .product-action -->
+
+                            <div class="product-action ">
+                                <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                            </div><!-- End .product-action -->
+                        </figure><!-- End .product-media -->
+
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chaussures</font></font></a>
+                            </div><!-- End .product-cat -->
+                            <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Des sandales</font></font></a></h3><!-- End .product-title -->
+                            <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                24,99&nbsp;$
+                            </font></font></div><!-- End .product-price -->
+                        </div><!-- End .product-body -->
+                    </div></div><div class="owl-item active" style="width: 277px; margin-right: 20px;"><div class="product product-2">
+                        <figure class="product-media">
+                            <span class="product-label label-sale"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">vente</font></font></span>
+                            <a href="product.html">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-3-1.jpg" alt="Image du produit" class="product-image">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-3-2.jpg" alt="Image du produit" class="product-image-hover">
+                            </a>
+
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable" title="Ajouter à la liste de souhaits"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                            </div><!-- End .product-action -->
+
+                            <div class="product-action ">
+                                <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                            </div><!-- End .product-action -->
+                        </figure><!-- End .product-media -->
+
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                            </div><!-- End .product-cat -->
+                            <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sweat imprimé</font></font></a></h3><!-- End .product-title -->
+                            <div class="product-price">
+                                <span class="new-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maintenant 7,99 $</font></font></span>
+                                <span class="old-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Était 12,99&nbsp;$</font></font></span>
+                            </div><!-- End .product-price -->
+                        </div><!-- End .product-body -->
+                    </div></div><div class="owl-item active" style="width: 277px; margin-right: 20px;"><div class="product product-2">
+                        <figure class="product-media">
+                            <a href="product.html">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-4-1.jpg" alt="Image du produit" class="product-image">
+                                <img src="../../static/assets/images/demos/demo-8/products/product-4-2.jpg" alt="Image du produit" class="product-image-hover">
+                            </a>
+
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable" title="Ajouter à la liste de souhaits"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                            </div><!-- End .product-action -->
+
+                            <div class="product-action ">
+                                <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                            </div><!-- End .product-action -->
+                        </figure><!-- End .product-media -->
+
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                            </div><!-- End .product-cat -->
+                            <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pantalon paper bag en lin mélangé</font></font></a></h3><!-- End .product-title -->
+                            <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                17,99&nbsp;$
+                            </font></font></div><!-- End .product-price -->
+                            <div class="product-nav product-nav-thumbs">
+                                <a href="#" class="active">
+                                    <img src="../../static/assets/images/demos/demo-8/products/product-4-thumb.jpg" alt="description du produit">
+                                </a>
+                                <a href="#">
+                                    <img src="../../static/assets/images/demos/demo-8/products/product-4-2-thumb.jpg" alt="description du produit">
+                                </a>
+                            </div>
+
+                        </div><!-- End .product-body -->
+                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div></div><!-- End .owl-carousel -->
+            </div><!-- .End .tab-pane -->
+        </div><!-- End .tab-content -->
+    </div><!-- End .container -->
+
+    <div class="mb-3 mb-xl-2"></div><!-- End .mb-3 -->
+
+    <div class="trending">
+        <a href="#">
+            <img src="../../static/assets/images/demos/demo-8/banners/banner-4.jpg" alt="Bannière">
+        </a>
+        <div class="banner banner-big d-md-block">
+            <div class="banner-content text-center">
+                <h4 class="banner-subtitle text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tendance</font></font></h4><!-- End .banner-subtitle -->
+                <h3 class="banner-title text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nouvelle Ligue</font></font></h3><!-- End .banner-title -->
+                <p class="d-none d-lg-block text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Donec odio. Quisque volutpat mattis eros.</font></font></p> 
+
+                <a href="{% url 'product' %}" class="btn btn-primary-white"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Achetez maintenant</font></font></span><i class="icon-long-arrow-right"></i></a>
+            </div><!-- End .banner-content -->
+        </div><!-- End .banner -->
+    </div>
+    <div class="container new-arrivals">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="banner banner-overlay">
+                    <a href="#">
+                        <img src="../../static/assets/images/demos/demo-8/banners/banner-5.jpg" alt="Bannière">
+                    </a>
+
+                    <div class="banner-content">
+                        <h4 class="banner-subtitle d-none d-lg-block"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nouvelles Arrivées</font></font></a></h4><!-- End .banner-subtitle -->
+                        <h3 class="banner-title"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">aux femmes</font></font></a></h3><!-- End .banner-title -->
+                        <a href="{% url 'product' %}" class="btn btn-outline-white banner-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Achetez maintenant</font></font><i class="icon-long-arrow-right"></i></a>
+                    </div><!-- End .banner-content -->
+                </div><!-- End .banner -->
+            </div><!-- End .col-md-6 -->
+
+            <div class="col-md-6">
+                <div class="banner banner-overlay">
+                    <a href="#">
+                        <img src="../../static/assets/images/demos/demo-8/banners/banner-6.jpg" alt="Bannière">
+                    </a>
+
+                    <div class="banner-content">
+                        <h4 class="banner-subtitle d-none d-lg-block"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nouvelles Arrivées</font></font></a></h4><!-- End .banner-subtitle -->
+                        <h3 class="banner-title "><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pour des hommes</font></font></a></h3><!-- End .banner-title -->
+                        <a href="#" class="btn btn-outline-white banner-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Achetez maintenant</font></font><i class="icon-long-arrow-right"></i></a>
+                    </div><!-- End .banner-content -->
+                </div><!-- End .banner -->
+            </div><!-- End .col-md-6 -->
+        </div><!-- End .row -->
+    </div><!-- End .container -->
+
+    <div class="mb-5"></div><!-- End .mb-5 -->
+
+    <div class="container recent-arrivals">
+        <div class="heading heading-flex align-items-center mb-3">
+            <h2 class="title title-lg"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arrivées récentes</font></font></h2><!-- End .title -->
+            <ul class="nav nav-pills nav-border-anim justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="recent-all-link" data-toggle="tab" href="#recent-all-tab" role="tab" aria-controls="recent-all-tab" aria-selected="true"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tous</font></font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="recent-women-link" data-toggle="tab" href="#recent-women-tab" role="tab" aria-controls="recent-women-tab" aria-selected="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Femmes</font></font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="recent-men-link" data-toggle="tab" href="#recent-men-tab" role="tab" aria-controls="recent-men-tab" aria-selected="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hommes</font></font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="recent-shoes-link" data-toggle="tab" href="#recent-shoes-tab" role="tab" aria-controls="recent-shoes-tab" aria-selected="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chaussures et bottes</font></font></a>
+                </li>
+            </ul>
+        </div><!-- End .heading -->
+
+        <div class="tab-content">
+            <div class="tab-pane p-0 fade show active" id="recent-all-tab" role="tabpanel" aria-labelledby="recent-all-link">
+                <div class="products">
+                    <div class="row justify-content-center">
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <span class="product-label label-sale"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vente</font></font></span>
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-5-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-5-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Haut à détail noué</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        <span class="new-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maintenant 3,99 $</font></font></span>
+                                        <span class="old-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Était 6,99&nbsp;$</font></font></span>
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-6-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-6-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chaussures</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Des sandales</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        12,99&nbsp;$
+                                    </font></font></div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-7-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-7-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sacs</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Petit sac seau</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        14,99&nbsp;$
+                                    </font></font></div><!-- End .product-price -->
+
+                                    <div class="product-nav product-nav-thumbs">
+                                        <a href="#" class="active">
+                                            <img src="../../static/assets/images/demos/demo-8/products/product-7-thumb.jpg" alt="description du produit">
+                                        </a>
+                                        <a href="#">
+                                            <img src="../../static/assets/images/demos/demo-8/products/product-7-2-thumb.jpg" alt="description du produit">
+                                        </a>
+                                    </div><!-- End .product-nav -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-8-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-8-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Veste en jean</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        34,99&nbsp;$
+                                    </font></font></div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-9-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-9-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BRobe courte portefeuille</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        17,99&nbsp;$
+                                    </font></font></div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-10-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-10-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Veste de motard</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        34,99&nbsp;$
+                                    </font></font></div><!-- End .product-price -->
+
+                                    <div class="product-nav product-nav-thumbs">
+                                        <a href="#" class="active">
+                                            <img src="../../static/assets/images/demos/demo-8/products/product-10-thumb.jpg" alt="description du produit">
+                                        </a>
+                                        <a href="#">
+                                            <img src="../../static/assets/images/demos/demo-8/products/product-10-2-thumb.jpg" alt="description du produit">
+                                        </a>
+                                    </div><!-- End .product-nav -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-11-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-11-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chaussures</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Flâneurs</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        9,99&nbsp;$
+                                    </font></font></div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <span class="product-label label-sale"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">vente</font></font></span>
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-12-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-12-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jegging taille haute super skinny</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        <span class="new-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maintenant 12,99 $</font></font></span>
+                                        <span class="old-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Était 17,99&nbsp;$</font></font></span>
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+                    </div><!-- End .row -->
+                </div><!-- End .products -->
+            </div><!-- .End .tab-pane -->
+            <div class="tab-pane p-0 fade" id="recent-women-tab" role="tabpanel" aria-labelledby="recent-women-link">
+                <div class="products">
+                    <div class="row justify-content-center">
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <span class="product-label label-sale"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vente</font></font></span>
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-5-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-5-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Haut à détail noué</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        <span class="new-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maintenant 3,99 $</font></font></span>
+                                        <span class="old-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Était 6,99&nbsp;$</font></font></span>
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-6-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-6-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chaussures</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Des sandales</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        12,99&nbsp;$
+                                    </font></font></div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+                    </div><!-- End .row -->
+                </div><!-- End .products -->
+            </div><!-- .End .tab-pane -->
+            <div class="tab-pane p-0 fade" id="recent-men-tab" role="tabpanel" aria-labelledby="recent-men-link">
+                <div class="products">
+                    <div class="row justify-content-center">
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-11-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-11-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chaussures</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Flâneurs</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        9,99&nbsp;$
+                                    </font></font></div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <span class="product-label label-sale"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">vente</font></font></span>
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-12-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-12-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jegging taille haute super skinny</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        <span class="new-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maintenant 12,99 $</font></font></span>
+                                        <span class="old-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Était 17,99&nbsp;$</font></font></span>
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                    </div><!-- End .row -->
+                </div><!-- End .products -->
+            </div><!-- .End .tab-pane -->
+            <div class="tab-pane p-0 fade" id="recent-shoes-tab" role="tabpanel" aria-labelledby="recent-shoes-link">
+                <div class="products">
+                    <div class="row justify-content-center">
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-7-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-7-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sacs</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Petit sac seau</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        14,99&nbsp;$
+                                    </font></font></div><!-- End .product-price -->
+
+                                    <div class="product-nav product-nav-thumbs">
+                                        <a href="#" class="active">
+                                            <img src="../../static/assets/images/demos/demo-8/products/product-7-thumb.jpg" alt="description du produit">
+                                        </a>
+                                        <a href="#">
+                                            <img src="../../static/assets/images/demos/demo-8/products/product-7-2-thumb.jpg" alt="description du produit">
+                                        </a>
+                                    </div><!-- End .product-nav -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-8-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-8-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Veste en jean</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        34,99&nbsp;$
+                                    </font></font></div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product product-2 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-9-1.jpg" alt="Image du produit" class="product-image">
+                                        <img src="../../static/assets/images/demos/demo-8/products/product-9-2.jpg" alt="Image du produit" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ajouter à la liste de souhaits</font></font></span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                    <div class="product-action">
+                                        <a href="{{ instance.get_absolute_url }}" class="btn-product btn-cart"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ajouter au panier</font></font></span></a>
+                                    </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <div class="product-cat">
+                                        <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vêtements</font></font></a>
+                                    </div><!-- End .product-cat -->
+                                    <h3 class="product-title"><a href="product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BRobe courte portefeuille</font></font></a></h3><!-- End .product-title -->
+                                    <div class="product-price"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        17,99&nbsp;$
+                                    </font></font></div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+                    </div><!-- End .row -->
+                </div><!-- End .products -->
+            </div><!-- .End .tab-pane -->
+        </div><!-- End .tab-content -->
+
+        <div class="more-container text-center mt-3 mb-3">
+            <a href="category.html" class="btn btn-outline-dark-3 btn-more"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Voir plus</font></font></span><i class="icon-long-arrow-right"></i></a>
+        </div><!-- End .more-container -->
+    </div><!-- End .container -->
+
+    <div class="mb-7"></div><!-- End .mb-5 -->
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-sm-6">
+                <div class="icon-box icon-box-card text-center">
+                    <span class="icon-box-icon">
+                        <i class="icon-rocket"></i>
+                    </span>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Paiement et livraison</font></font></h3><!-- End .icon-box-title -->
+                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Livraison gratuite pour les commandes de plus de 50$</font></font></p>
+                    </div><!-- End .icon-box-content -->
+                </div><!-- End .icon-box -->
+            </div><!-- End .col-lg-4 col-sm-6 -->
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="icon-box icon-box-card text-center">
+                    <span class="icon-box-icon">
+                        <i class="icon-rotate-left"></i>
+                    </span>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remboursement de retour</font></font></h3><!-- End .icon-box-title -->
+                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Garantie de remboursement gratuite à 100&nbsp;%</font></font></p>
+                    </div><!-- End .icon-box-content -->
+                </div><!-- End .icon-box -->
+            </div><!-- End .col-lg-4 col-sm-6 -->
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="icon-box icon-box-card text-center">
+                    <span class="icon-box-icon">
+                        <i class="icon-life-ring"></i>
+                    </span>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Assistance de qualité</font></font></h3><!-- End .icon-box-title -->
+                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Commentaires toujours en ligne 24h/24 et 7j/7</font></font></p>
+                    </div><!-- End .icon-box-content -->
+                </div><!-- End .icon-box -->
+            </div><!-- End .col-lg-4 col-sm-6 -->
+        </div><!-- End .row -->
+    </div><!-- End .container -->
+        
+    <div class="container instagram">
+        <div class="heading text-center">
+            <h2 class="title title-lg"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Suis nous sur instagram</font></font></h2><!-- End .title -->
+            <p class="title-desc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Envie de partager votre style avec nous ?</font></font></p><!-- End .title-desc -->
+        </div><!-- End .heading -->
+    </div><!-- End .container -->
+
+    <div class="owl-carousel owl-simple owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
+            &quot;nav&quot;: false, 
+            &quot;dots&quot;: false,
+            &quot;items&quot;: 6,
+            &quot;margin&quot;: 0,
+            &quot;loop&quot;: false,
+            &quot;responsive&quot;: {
+                &quot;0&quot;: {
+                    &quot;items&quot;:1
+                },
+                &quot;360&quot;: {
+                    &quot;items&quot;:2
+                },
+                &quot;600&quot;: {
+                    &quot;items&quot;:3
+                },
+                &quot;992&quot;: {
+                    &quot;items&quot;:4
+                },
+                &quot;1200&quot;: {
+                    &quot;items&quot;:5
+                },
+                &quot;1500&quot;: {
+                    &quot;items&quot;:6
+                }
+            }
+        }">
+        <!-- End .instagram-feed -->
+
+        <!-- End .instagram-feed -->
+
+        <!-- End .instagram-feed -->
+
+        <!-- End .instagram-feed -->
+
+        <!-- End .instagram-feed -->
+
+        <!-- End .instagram-feed -->
+    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1402px;"><div class="owl-item active" style="width: 233.6px;"><div class="instagram-feed">
+            <img src="../../static/assets/images/demos/demo-8/instagram/1.jpg" alt="img">
+
+            <div class="instagram-feed-content">
+                <a href="#"><i class="icon-heart-o"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">466</font></font></a>
+                <a href="#"><i class="icon-comments"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">65</font></font></a>
+            </div><!-- End .instagram-feed-content -->
+        </div></div><div class="owl-item active" style="width: 233.6px;"><div class="instagram-feed">
+            <img src="../../static/assets/images/demos/demo-8/instagram/2.jpg" alt="img">
+
+            <div class="instagram-feed-content">
+                <a href="#"><i class="icon-heart-o"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">39</font></font></a>
+                <a href="#"><i class="icon-comments"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">78</font></font></a>
+            </div><!-- End .instagram-feed-content -->
+        </div></div><div class="owl-item active" style="width: 233.6px;"><div class="instagram-feed">
+            <img src="../../static/assets/images/demos/demo-8/instagram/3.jpg" alt="img">
+
+            <div class="instagram-feed-content">
+                <a href="#"><i class="icon-heart-o"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">691</font></font></a>
+                <a href="#"><i class="icon-comments"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">87</font></font></a>
+            </div><!-- End .instagram-feed-content -->
+        </div></div><div class="owl-item active" style="width: 233.6px;"><div class="instagram-feed">
+            <img src="../../static/assets/images/demos/demo-8/instagram/4.jpg" alt="img">
+
+            <div class="instagram-feed-content">
+                <a href="#"><i class="icon-heart-o"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">508</font></font></a>
+                <a href="#"><i class="icon-comments"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">124</font></font></a>
+            </div><!-- End .instagram-feed-content -->
+        </div></div><div class="owl-item active" style="width: 233.6px;"><div class="instagram-feed">
+            <img src="../../static/assets/images/demos/demo-8/instagram/5.jpg" alt="img">
+
+            <div class="instagram-feed-content">
+                <a href="#"><i class="icon-heart-o"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">433</font></font></a>
+                <a href="#"><i class="icon-comments"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">27</font></font></a>
+            </div><!-- End .instagram-feed-content -->
+        </div></div><div class="owl-item" style="width: 233.6px;"><div class="instagram-feed">
+            <img src="../../static/assets/images/demos/demo-8/instagram/6.jpg" alt="img">
+
+            <div class="instagram-feed-content">
+                <a href="#"><i class="icon-heart-o"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">122</font></font></a>
+                <a href="#"><i class="icon-comments"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">55</font></font></a>
+            </div><!-- End .instagram-feed-content -->
+        </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div></div><!-- End .owl-carousel -->
+</div></main>
+{% endfor %}
+{% endblock %}

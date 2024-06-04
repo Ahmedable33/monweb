@@ -1,0 +1,119 @@
+{% extends 'base1.html' %}
+
+
+{% block content %}
+{% for message in messages %}
+	{{message}}
+{% endfor %}
+
+{% if not user.is_authenticated %}
+
+
+
+<body class="text-center">
+    <main class="form-signup">
+      <form method="POST" action="" enctype="multipart/form-data">
+          {% csrf_token %}
+        <img class="mb" src="/static/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+        <h1 class="h3 mb fw-normal">Sign up</h1>
+
+        <div class="form-floating">
+          <input class="form-control" type="text" name="username" value="" placeholder="username" id="floatingInput"  required>
+          <label for="floatingInput">Username</label>
+        </div>
+          <div class="form-floating">
+          <input class="form-control" type="text" name="firstname" value="" placeholder="firstname"   id="floatingInput"  required>
+          <label for="floatingInput">First Name</label>
+        </div>
+          <div class="form-floating">
+          <input class="form-control"type="text" name="lastname" value="" placeholder="lastname" id="floatingInput"   required>
+          <label for="floatingInput">Laste Name</label>
+        </div>
+          <div class="form-floating">
+          <input class="form-control" type="email" name="email" value="" placeholder="email" id="floatingInput" required>
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password"  name="password1"   class="form-control" id="floatingPassword" placeholder="Password" required>
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" name="password2" value="" placeholder="confirm password" class="form-control" id="floatingPassword" required>
+          <label for="floatingPassword">Confirm Password</label>
+        </div>
+
+        <div class="checkbox mb-2">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit">REGISTER</button> <br> <br>
+
+          <a href="{% url 'connexion' %}" class="w-100 btn btn-lg btn-info ">Have an account ?</a>
+
+        <p class="mt-2 mb-2 text-muted">&copy; 2017–2021</p>
+
+
+      </form>
+    </main>
+</body>
+
+
+
+{% comment %} <div class="page-section mb-60">
+  <div class="container">
+      <div class="row">
+       
+      
+<div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
+  <form method="POST" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+      <div class="login-form">
+          <h4 class="login-title">Register</h4>
+          <div class="row">
+              <div class="col-md-6 col-12 mb-20">
+                  <label>Username</label>
+                  <input class="mb-0" type="text"  name="username" placeholder="Username" required>
+              </div>
+              <div class="col-md-6 col-12 mb-20">
+                <label>First Name</label>
+                <input class="mb-0" type="text"  name="firstname" placeholder="First Name" required>
+            </div>
+              <div class="col-md-6 col-12 mb-20">
+                  <label>Last Name</label>
+                  <input class="mb-0" type="text" name="lastname" placeholder="Last Name" required>
+              </div>
+              <div class="col-md-12 mb-20">
+                  <label>Email Address*</label>
+                  <input class="mb-0" type="email"  name="email" placeholder="Email Address" required>
+              </div>
+              <div class="col-md-6 mb-20">
+                  <label>Password</label>
+                  <input class="mb-0" type="password" name="password1" placeholder="Password required" required>
+              </div>
+              <div class="col-md-6 mb-20">
+                  <label>Confirm Password</label>
+                  <input class="mb-0" type="password" name="password2" placeholder="Confirm Password" required>
+              </div>
+              <div class="col-12">
+                  <button class="register-button mt-0">Register</button>
+              </div>
+          <a href="{% url 'connexion' %}" class="w-100 btn btn-lg btn-info ">Have an account ?</a>
+
+          </div>
+      </div>
+  </form>
+</div>
+</div>
+</div>
+</div> {% endcomment %}
+{% else %}
+
+	<p>
+		<h3>
+		You are already online
+	</h3>
+	</p>
+
+{% endif %}
+{% endblock%}

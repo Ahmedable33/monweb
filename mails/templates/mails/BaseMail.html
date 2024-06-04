@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+    <title> MY SHOP  </title>
+</head>
+<body>
+<a href="{% url 'product' %}"> <div> BIENVENU DANS LA MESSAGERIE MAIL </div></a>
+
+   {% block mail %}
+
+   {% endblock %}
+
+
+</body>
+</html>
